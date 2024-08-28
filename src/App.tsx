@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import { ApiClient } from './api/ApiClient';
 import './App.css';
-import ProductList from './components/ProductList';
+import ProductList from './components/ProductItem/ProductList';
 import { Product } from './models/product';
 
 function App() {

@@ -1,26 +1,33 @@
-import React from 'react';
+import { useEffect, useState, useMemo } from 'react';
+import { ApiClient } from './api/ApiClient';
 import './App.css';
-import ProductItem from './components/ProductItem';
+import ProductList from './components/ProductList';
 import { Product } from './models/product';
 
 function App() {
-  const product = new Product();
-  product.id = 1;
-  product.name = "Sample Product";
-  product.category = "Electronics";
-  product.price = 99.99;
-  
-  const sampleProduct = {
-    id: 1,
-    name: "Sample Product",
-    category: "Electronics",
-    price: 99.99
-  };
+
+  const apiClient = useMemo(() => new ApiClient(), []); // TODO: memoizing to avoid re-renders taking over this ref
+  const [products, setProducts] = useState<Product[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setIsLoading(true);
+      const fetchedProducts = await apiClient.getAll<Product>();
+      setProducts(fetchedProducts);
+      setIsLoading(false);
+    };
+    fetchProducts();
+  }, [apiClient]); // react-hooks/exhaustive-deps requires to declare all dependencies
 
   return (
     <div className="App">
-      <h1>My Product App</h1>
-      <ProductItem product={product} />
+      <h1>WHATEVER.WORKS</h1>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <ProductList products={products} />
+      )}
     </div>
   );
 }

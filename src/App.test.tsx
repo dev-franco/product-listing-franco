@@ -10,7 +10,7 @@ const setup = new Promise(() => {
   setTimeout(() => {
     render(<App />);
     resolve();
-  }, 500) // while the .json is served from a local file, a 500ms emulates a network request on the ApiClient
+  }, 500) // while the .json is served from a local file, an actual request is being made to the API which hangs for 500ms to showcase the app loading state
 });
 
 describe('layout', () => {

@@ -30,3 +30,12 @@ This project makes use of 'node-sass' for the SCSS stylesheets.
 ## Good to know
 
 There are some images loading in the UI, but no images are provided in the original assets. A random placeholder is being used to make the layout a bit more convincing. The request for the images is being made to https://random-image-pepebigotes.vercel.app/api/random-image .
+
+
+### Testing
+
+This project has 4 tests setup for the `App` component, under `src/App.test.tsx`. It only tests the presence of elements in the layout and the search functionality. Run the tests with:
+
+```
+npm test
+``` 

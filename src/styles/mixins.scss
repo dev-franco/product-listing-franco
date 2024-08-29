@@ -1,0 +1,27 @@
+@mixin breakpoint($prop, $size) {
+    @media only screen and (#{$prop}: $size + px) { @content; }
+}
+
+@mixin xs() {
+    @include breakpoint(min-width, 320) { @content; }
+}
+
+@mixin sm() {
+    @include breakpoint(min-width, 576) { @content; }
+}
+
+@mixin md() {
+    @include breakpoint(min-width, 768) { @content; }
+}
+
+@mixin lg() {
+    @include breakpoint(min-width, 992) { @content; }
+}
+
+@mixin xl() {
+    @include breakpoint(min-width, 1200) { @content; }
+}
+
+@mixin xxl() {
+    @include breakpoint(min-width, 1400) { @content; }
+}

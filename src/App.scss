@@ -1,0 +1,85 @@
+@import './styles/palette.scss';
+@import './styles/mixins.scss';
+
+.App {
+  
+  main {
+    display: flex;
+    flex-direction: column;
+
+    @include md {
+      overflow: hidden;
+      max-height: 100vh;
+      flex-direction: row;
+    }
+    
+    section {
+      
+      
+      &.ww-sidebar {
+      
+        background-color: $color-ww-primary;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        padding: 30px;
+        
+        @include md {
+          flex-basis: 25%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+        }
+        
+        .ww-sidebar-logo {
+          img {
+            filter: brightness(0) invert(1); // makes it white
+          }
+        }
+        
+      }
+      
+      &.ww-main-content {
+               
+        @include md {
+          flex-basis: 75%;
+          overflow-y: scroll;
+        }
+        
+        .ww-products-filter {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          background-color: $color-whitesmoke;
+          padding: 30px;
+          overflow-x: auto;
+          position: sticky;
+          top: 0;
+          z-index: 10;
+
+          @include md {
+            flex-direction: row;
+            position: static;
+          }
+
+          .ww-products-filter-search, .ww-products-filter-category {
+            min-width: 220px;
+          }
+        }
+
+        .ww-products {
+          padding: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 20px;
+          align-items: center;
+        }
+        
+      }
+    }
+  }
+}
+

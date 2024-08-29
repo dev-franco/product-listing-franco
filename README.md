@@ -1,32 +1,41 @@
-# Product listing
+# README
 
-## Case 
+This project was forked form https://github.com/whatever-works-dev/product-listing - please refer to the project's original README for information on the case and requirements.
 
-Create a small React application that fetches and displays a list of products from a mock API, allowing users to filter products by category and search by name.
+## Getting started
 
-## Requirements
+To run the project make sure to install the dependencies via:
+```
+npm install
+```
 
-1. Set Up:
+To start the development server run:
+```
+npm start
+``` 
 
-- Initialize a new React project using Create React App (or any preferred boilerplate).
-- Use TypeScript for type safety.
 
-2. Components:
+## Relevant dependencies
 
-- ProductList: Display a list of products.
-- ProductItem: Display individual product details (name, price, and category).
-- Filter: Allow users to filter products by category.
-- Search: Allow users to search for products by name.
+### Create React app
 
-3. Functionality:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- Fetch a list of products from an API mockup, JSON file (see products.json).
-- Implement filtering by category.
-- Implement searching by product name.
-- Ensure the UI is responsive and looks good on both desktop and mobile devices.
+### Ant Design
+This project makes use of [Ant Design](https://ant.design/components/overview/) for the UI components, such as the form controls, loading indicator, and the 'no results' widget.
 
-4. Other criteria:
+### Node-Sass
+This project makes use of 'node-sass' for the SCSS stylesheets.
 
-- Provide a README file with instructions on how to set up and run the project.
-- Do not forget to follow best practices for clean code, reusability, and maintainability.
-- What do you think about testing?
+## Good to know
+
+There are some images loading in the UI, but no images are provided in the original assets. A random placeholder is being used to make the layout a bit more convincing. The request for the images is being made to https://random-image-pepebigotes.vercel.app/api/random-image .
+
+
+### Testing
+
+This project has 4 tests setup for the `App` component, under `src/App.test.tsx`. It only tests the presence of elements in the layout and the search functionality. Run the tests with:
+
+```
+npm test
+``` 

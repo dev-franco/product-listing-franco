@@ -6,10 +6,10 @@
   main {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    max-height: 100vh;
-    
+
     @include md {
+      overflow: hidden;
+      max-height: 100vh;
       flex-direction: row;
     }
     

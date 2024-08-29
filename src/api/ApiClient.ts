@@ -1,18 +1,21 @@
-import data from '../api/products.json';
 import { Metadata } from '../models/metadata';
 
 export class ApiClient {
 
+    static url = '/api/products.json';
+
     public async getAll<T>(): Promise<T[]> {
-        await new Promise(resolve => setTimeout(resolve, 500));
+        await new Promise(resolve => setTimeout(resolve, 500)); // simulate delay to showcase app in loading state
+        const response = await fetch(ApiClient.url);
+        const data = await response.json();
         return data as T[];
     }
 
     public async getMetadata(): Promise<Metadata> {
-        await new Promise(resolve => setTimeout(resolve, 250));
+        const response = await fetch(ApiClient.url);
+        const data = await response.json();
         const metadata = new Metadata();
-        metadata.productCategories = [...new Set(data.map(d => d.category))].sort();
-
-        return metadata
+        metadata.productCategories = [...new Set(data.map((d: any) => d.category))].sort() as string[];
+        return metadata;
     }
 }

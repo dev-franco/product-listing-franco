@@ -6,7 +6,6 @@
   main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     
     @include md {
       flex-direction: row;
@@ -25,6 +24,13 @@
         flex-direction: column;
         padding: 30px;
 
+        @include md {
+          flex-basis: 25%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+        }
+
         .ww-sidebar-logo {
           img {
             filter: brightness(0) invert(1); // makes it white
@@ -34,7 +40,13 @@
       }
 
       &.ww-main-content {
-        flex-basis: 75%;
+
+        padding: 30px;
+
+        @include md {
+          flex-basis: 75%;
+        }
+        
       }
     }
   }

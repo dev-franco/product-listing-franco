@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import { ApiClient } from './api/ApiClient';
 import './App.scss';
-import ProductList from './components/ProductItem/ProductList';
+import ProductList from './components/ProductList/ProductList';
 import { Product } from './models/product';
 import { Metadata } from './models/metadata';
 import Search from './components/Search/Search';

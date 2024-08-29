@@ -1,11 +1,12 @@
 import { useEffect, useState, useMemo } from 'react';
 import { ApiClient } from './api/ApiClient';
-import './App.css';
+import './App.scss';
 import ProductList from './components/ProductItem/ProductList';
 import { Product } from './models/product';
 import { Metadata } from './models/metadata';
 import Search from './components/Search/Search';
 import Filter from './components/Filter/Filter';
+import logo from './assets/img/whatever-works-logo.png';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
     if (filterCategory) {
       filteredProducts = filteredProducts.filter(p => p.category === filterCategory);
     }
-    if(filterSearch) {
+    if (filterSearch) {
       filteredProducts = filteredProducts.filter(p => p.name?.toLowerCase().includes(filterSearch.toLowerCase()));
     }
     return filteredProducts;
@@ -44,15 +45,20 @@ function App() {
     fetchMetadata();
   }, [apiClient]); // "react-hooks/exhaustive-deps" requires to declare all dependencies
 
-  
 
-  return (    
+
+  return (
     <div className="App">
-      <header>
-        <h1>WHATEVER.WORKS</h1>
-      </header>
       <main>
-        <div className="ww-main-content">
+        <section className="ww-sidebar">
+          <div className="ww-sidebar-logo">
+            <img src={logo} alt="logo" />
+          </div>
+          <div className="ww-sidebar-content">
+            Content
+          </div>
+        </section>
+        <section className="ww-main-content">
           <div className="ww-products-filter">
             <div className="ww-products-filter-category">
               <Filter categories={metadata.productCategories ?? []} onCategoryChange={setFilterCategory} />
@@ -65,8 +71,9 @@ function App() {
             {isLoading && <p>Loading...</p>}
             {!isLoading && <ProductList products={getFilteredProducts()} />}
           </div>
-        </div>        
-      </main>      
+        </section>
+
+      </main>
     </div>
   );
 }

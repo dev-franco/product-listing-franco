@@ -1,0 +1,42 @@
+@import './styles/palette.scss';
+@import './styles/mixins.scss';
+
+.App {
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    @include md {
+      flex-direction: row;
+    }
+
+    section {
+      padding: 0 20px;
+
+      &.ww-sidebar {
+
+        background-color: $color-ww-primary;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        padding: 30px;
+
+        .ww-sidebar-logo {
+          img {
+            filter: brightness(0) invert(1); // makes it white
+          }
+        }
+
+      }
+
+      &.ww-main-content {
+        flex-basis: 75%;
+      }
+    }
+  }
+}
+

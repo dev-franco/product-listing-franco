@@ -2,7 +2,7 @@
 @import './styles/mixins.scss';
 
 .App {
-
+  
   main {
     display: flex;
     flex-direction: column;
@@ -10,12 +10,12 @@
     @include md {
       flex-direction: row;
     }
-
+    
     section {
       padding: 0 20px;
-
+      
       &.ww-sidebar {
-
+        
         background-color: $color-ww-primary;
         align-items: center;
         justify-content: center;
@@ -23,28 +23,42 @@
         gap: 20px;
         flex-direction: column;
         padding: 30px;
-
+        
         @include md {
           flex-basis: 25%;
           height: 100vh;
           display: flex;
           flex-direction: column;
         }
-
+        
         .ww-sidebar-logo {
           img {
             filter: brightness(0) invert(1); // makes it white
           }
         }
-
+        
       }
-
+      
       &.ww-main-content {
-
+        
         padding: 30px;
-
+        
         @include md {
           flex-basis: 75%;
+        }
+        
+        .ww-products-filter {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          @include md {
+            flex-direction: row;
+          }
+
+          .ww-products-filter-search {
+            min-width: 220px;
+          }
         }
         
       }

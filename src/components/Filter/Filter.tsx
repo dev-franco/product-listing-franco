@@ -15,8 +15,7 @@ const Filter: React.FC<FilterProps> = ({ categories, onCategoryChange }) => {
     return (
         <div className="ww-filter-wrapper">
             { categories && ( categories.length ?? 0 ) > 0 && (
-                <Select onChange={e => handleFilterCategoryChange(e)} placeholder="Select a category"
->
+                <Select onChange={e => handleFilterCategoryChange(e)} placeholder="Select a category">
                     <Select.Option value="">All categories</Select.Option>
                 {categories.map(category => (
                     <Select.Option key={category} value={category}>{category}</Select.Option>

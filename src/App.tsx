@@ -60,11 +60,11 @@ function App() {
         </section>
         <section className="ww-main-content">
           <div className="ww-products-filter">
-            <div className="ww-products-filter-category">
-              <Filter categories={metadata.productCategories ?? []} onCategoryChange={setFilterCategory} />
-            </div>
             <div className="ww-products-filter-search">
               <Search onSearch={setFilterSearch} />
+            </div>
+            <div className="ww-products-filter-category">
+              <Filter categories={metadata.productCategories ?? []} onCategoryChange={setFilterCategory} />
             </div>
           </div>
           <div className="ww-products-list">

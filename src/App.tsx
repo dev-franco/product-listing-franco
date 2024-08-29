@@ -7,7 +7,7 @@ import { Metadata } from './models/metadata';
 import Search from './components/Search/Search';
 import Filter from './components/Filter/Filter';
 import logo from './assets/img/whatever-works-logo.png';
-
+import { Spin } from 'antd';
 function App() {
 
   const apiClient = useMemo(() => new ApiClient(), []); // TODO: memoizing to avoid re-renders taking over this ref
@@ -65,8 +65,8 @@ function App() {
               <Filter categories={metadata.productCategories ?? []} onCategoryChange={setFilterCategory} />
             </div>
           </div>
-          <div className="ww-products-list">
-            {isLoading && <p>Loading...</p>}
+          <div className="ww-products">
+            {isLoading && <Spin />}
             {!isLoading && <ProductList products={getFilteredProducts()} />}
           </div>
         </section>

@@ -12,10 +12,10 @@
     }
     
     section {
-      padding: 0 20px;
+      
       
       &.ww-sidebar {
-        
+      
         background-color: $color-ww-primary;
         align-items: center;
         justify-content: center;
@@ -40,9 +40,7 @@
       }
       
       &.ww-main-content {
-        
-        padding: 30px;
-        
+               
         @include md {
           flex-basis: 75%;
         }
@@ -51,6 +49,8 @@
           display: flex;
           flex-direction: column;
           gap: 10px;
+          background-color: $color-whitesmoke;
+          padding: 30px;
 
           @include md {
             flex-direction: row;
@@ -59,6 +59,10 @@
           .ww-products-filter-search {
             min-width: 220px;
           }
+        }
+
+        .ww-products-list {
+          padding: 30px;
         }
         
       }

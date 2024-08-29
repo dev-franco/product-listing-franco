@@ -2,13 +2,9 @@
 
 
 .ww-products-list-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 30px;
-    @include md() {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 24px;
+    grid-auto-rows: minmax(280px, auto);
+    grid-auto-flow: dense;
 }

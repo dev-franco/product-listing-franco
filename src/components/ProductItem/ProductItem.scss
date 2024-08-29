@@ -1,13 +1,54 @@
+@import '../../styles/palette.scss';
+
+
+
 .ww-product-item {
-    
+
+    .ant-card {
+        
+    }
+
     display: flex;
     flex-direction: row;
     gap: 10px;
     justify-content: space-between;
-    
-    .ww-product-description {
+
+    .ww-product-meta {
+        display: flex;
+        justify-content: space-between;
+        color: #666666;
+        align-items: center;
+
+        .ww-product-description {
+            
+            .ww-product-name {
+                font-size: 1.25em;
+                
+            }
+            .ww-product-category {
+                font-size: 1em;
+                color: #4096ff;
+                
+            }
+        }
+
+        .ww-product-price {
+
+            span {
+                font-size: 1.10em;
+                font-weight: 600;
+                background-color: $color-ww-primary;
+                padding: 10px;
+                color: $color-white;
+                border-radius: 5px;
+            }
+            
+        }
+
         
     }
+    
+    
 }
 
 .ww-product-item-name span {

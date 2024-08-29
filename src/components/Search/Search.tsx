@@ -1,3 +1,5 @@
+import { Input } from "antd";
+
 interface SearchProps {
   onSearch: (searchTerm: string) => void;
 }
@@ -9,7 +11,7 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
   };
 
   return (
-    <input type="text" onChange={handleSearchChange} placeholder="Search for product name..." />
+    <Input onChange={handleSearchChange} placeholder="Search for product name..." />
   );
 };
 

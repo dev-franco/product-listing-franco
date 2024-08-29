@@ -26,3 +26,7 @@ This project makes use of [Ant Design](https://ant.design/components/overview/) 
 
 ### Node-Sass
 This project makes use of 'node-sass' for the SCSS stylesheets.
+
+## Good to know
+
+There are some images loading in the UI, but no images are provided in the original assets. A random placeholder is being used to make the layout a bit more convincing. The request for the images is being made to https://random-image-pepebigotes.vercel.app/api/random-image .

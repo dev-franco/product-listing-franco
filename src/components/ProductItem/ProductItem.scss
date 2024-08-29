@@ -7,6 +7,14 @@
     gap: 10px;
     justify-content: space-between;
 
+    .ant-card {
+        .ant-card-cover {
+            img {
+                min-height: 200px;
+            }
+        }
+    }
+
     .ww-product-meta {
         display: flex;
         justify-content: space-between;
@@ -43,8 +51,4 @@
     }
     
     
-}
-
-.ww-product-item-name span {
-    font-weight: bold;
 }

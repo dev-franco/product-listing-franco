@@ -1,0 +1,15 @@
+.ww-product-item {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    
+    .ww-product-description {
+        
+    }
+}
+
+.ww-product-item-name span {
+    font-weight: bold;
+}

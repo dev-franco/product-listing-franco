@@ -55,9 +55,13 @@
           background-color: $color-whitesmoke;
           padding: 30px;
           overflow-x: auto;
+          position: sticky;
+          top: 0;
+          z-index: 10;
 
           @include md {
             flex-direction: row;
+            position: static;
           }
 
           .ww-products-filter-search, .ww-products-filter-category {

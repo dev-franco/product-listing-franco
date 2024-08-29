@@ -8,3 +8,9 @@
     grid-auto-rows: minmax(280px, auto);
     grid-auto-flow: dense;
 }
+
+.ww-products-list-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

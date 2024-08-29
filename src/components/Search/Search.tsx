@@ -17,7 +17,8 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
     <Input 
       onChange={handleSearchChange} 
       placeholder="Search for product name" 
-      suffix={<SearchOutlined className="ww-search-input-icon" />} 
+      allowClear
+      prefix={<SearchOutlined className="ww-search-input-icon" />} 
     />
   );
 };

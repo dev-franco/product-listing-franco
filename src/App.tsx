@@ -54,9 +54,7 @@ function App() {
           <div className="ww-sidebar-logo">
             <img src={logo} alt="logo" />
           </div>
-          <div className="ww-sidebar-content">
-            Content
-          </div>
+          { /*<div className="ww-sidebar-content"></div>*/ }
         </section>
         <section className="ww-main-content">
           <div className="ww-products-filter">

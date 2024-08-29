@@ -1,6 +1,6 @@
 import React from 'react';
 import { Product } from '../../models/product';
-import ProductItem from './ProductItem';
+import ProductItem from '../ProductItem/ProductItem';
 
 interface ProductListProps {
   products: Product[];
@@ -9,7 +9,6 @@ interface ProductListProps {
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
     <div className="product-list">
-      <h2>Product List</h2>
       {products.map((product) => (
         <ProductItem key={product.id} product={product} />
       ))}
